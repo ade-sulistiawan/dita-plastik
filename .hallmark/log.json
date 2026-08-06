@@ -1,6 +1,19 @@
 [
   {
     "date": "2026-08-06",
+    "genre": "playful",
+    "macrostructure": "Bento Grid",
+    "theme": "custom",
+    "drop": "bubble",
+    "theme_axes": "light / rounded-geometric-sans / duo sky-cyan+coral",
+    "vibe": "soft pastel bubbles, buoyant, approachable",
+    "nav": "N1b floating wordmark + pill links",
+    "footer": "Ft5 Statement",
+    "enrichment": "Tier-A pure-CSS floating bubbles + marquee ticker",
+    "brief": "Dita Plastik · redesign bubble theme + animation"
+  },
+  {
+    "date": "2026-08-06",
     "genre": "editorial",
     "macrostructure": "Marquee Hero",
     "theme": "carnival",
