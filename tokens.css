@@ -1,44 +1,50 @@
-/* Hallmark · tokens · genre: playful · theme: custom (bubble) — sky-cyan on warm paper
- * axes — paper band: light (96%) · display style: rounded-geometric-sans (Bricolage Grotesque 600)
- * accent hue: cool sky-cyan (~205°) + secondary coral (~60°). Caps for playful. Free baseline only.
+/* Hallmark · tokens · genre: modern-minimal/editorial corporate · theme: Hum (green-tuned)
+ * axes — paper band: light (98%, cool near-white) · display style: rounded-sans (Plus Jakarta Sans 600)
+ * accent hue: dark green #1B5E20 (sustainability) + lime WhatsApp pop. No serif anywhere.
  * Every colour and font in the build references a name here.
  */
 
 :root {
-  /* ── Paper & ink — warm cream, slight amber tint ─────────────────── */
-  --color-paper: oklch(96% 0.014 95);
-  --color-paper-2: oklch(93% 0.018 95);
-  --color-paper-3: oklch(88% 0.02 95);
-  --color-ink: oklch(22% 0.022 75);
-  --color-ink-2: oklch(36% 0.018 80);
-  --color-muted: oklch(50% 0.016 82);
+  /* ── Paper & ink — neutral near-white with a cool green pull ─────── */
+  --color-paper: oklch(98% 0.006 95);
+  --color-paper-2: oklch(96% 0.012 120);
+  --color-paper-3: oklch(93% 0.014 120);
+  --color-ink: oklch(21% 0.028 165);
+  --color-ink-2: oklch(33% 0.03 160);
+  --color-muted: oklch(48% 0.02 160);
 
-  /* ── Rules — soft hairlines, no hard black ───────────────────────── */
-  --color-rule: oklch(84% 0.014 92);
-  --color-rule-2: oklch(88% 0.014 92);
+  /* ── Rules — soft hairlines ──────────────────────────────────────── */
+  --color-rule: oklch(85% 0.014 120);
+  --color-rule-2: oklch(90% 0.012 120);
 
-  /* ── Accent duo — sky-cyan primary, coral secondary (playful) ────── */
-  --color-accent: oklch(72% 0.13 205);   /* sky-cyan — marks, links, fills */
-  --color-accent-2: oklch(74% 0.16 60);  /* coral — the secondary bubble */
-  --color-accent-ink: oklch(20% 0.02 90);/* ink ON a light accent fill */
-  --color-focus: oklch(70% 0.18 205);
+  /* ── Accent system — green sustainability anchor + WhatsApp pop ──── */
+  --color-accent: #1B5E20;                 /* primary · dark green · buttons, marks, bands */
+  --color-accent-deep: oklch(30% 0.13 150);/* button underside (press edge) */
+  --color-accent-ink: #ffffff;              /* text ON dark green fill */
+  --color-accent-2: oklch(47% 0.13 148);   /* mid green — links, hover */
+  --color-sage: oklch(88% 0.05 150);        /* soft green tint — surfaces */
+  --color-sage-2: oklch(95% 0.03 150);      /* pale green band */
+  --color-lime: #25D366;                    /* WhatsApp pop — single energy moment */
+  --color-lime-deep: oklch(70% 0.18 155);   /* lime press edge */
+  --color-focus: oklch(62% 0.16 150);
 
-  /* ── Type — 2+1: display + body + outlier ────────────────────────── */
-  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Satoshi", ui-sans-serif, system-ui, sans-serif;
-  --font-outlier: "Space Grotesk", ui-monospace, monospace;
+  /* ── Type — 2+1: display + body + mono label ─────────────────────── */
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "JetBrains Mono", ui-monospace, monospace;
 
   /* Major third, 1.25, from a 16px body. */
-  --text-xs: 0.64rem;
+  --text-xs: 0.72rem;
   --text-sm: 0.8rem;
   --text-base: 1rem;
   --text-md: 1.25rem;
   --text-lg: 1.5625rem;
   --text-xl: 1.9531rem;
   --text-2xl: 2.4414rem;
-  --text-display: clamp(2.375rem, 6.5vw + 0.75rem, 5rem);
+  --text-display: clamp(2.4rem, 6.5vw + 0.75rem, 4.9rem);
+  --track-display: -0.025em;
 
-  /* ── Space — 4pt base, gentle ────────────────────────────────────── */
+  /* ── Space — 4pt base ────────────────────────────────────────────── */
   --space-3xs: 0.125rem;
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
@@ -48,25 +54,27 @@
   --space-xl: 2.5rem;
   --space-2xl: 4rem;
   --space-3xl: 6rem;
-  --page-gutter: clamp(1.125rem, 4vw, 3.25rem);
-  --measure: 62ch;
+  --page-gutter: clamp(1.25rem, 4vw, 3.25rem);
+  --measure: 60ch;
+  --shell: 76rem;
 
-  /* ── Shape — the bubble vocabulary ───────────────────────────────── */
-  --radius-card: 28px;
+  /* ── Shape — rounded corporate ───────────────────────────────────── */
+  --radius-card: 18px;
   --radius-pill: 999px;
-  --radius-bubble: 50%;
-  --shadow-soft: 0 18px 40px -22px color-mix(in oklch, var(--color-ink) 45%, transparent);
-  --shadow-bubble: 0 24px 50px -28px color-mix(in oklch, var(--color-accent) 70%, transparent);
+  --radius-input: 12px;
+  --shadow-soft: 0 14px 40px -22px color-mix(in oklch, var(--color-ink) 50%, transparent);
+  --shadow-card: 0 1px 0 0 oklch(0% 0 0 / 0.02), 0 16px 34px -20px color-mix(in oklch, var(--color-ink) 35%, transparent);
+  --shadow-lift: 0 2px 0 0 oklch(0% 0 0 / 0.02), 0 22px 44px -20px color-mix(in oklch, var(--color-ink) 45%, transparent);
 
-  /* ── Motion — playful, springy-but-tasteful, 1.15× ───────────────── */
+  /* ── Motion — calm, confident, minimal ───────────────────────────── */
   --dur-micro: 130ms;
-  --dur-short: 240ms;
-  --dur-long: 480ms;
-  --dur-ticker: 34s;
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --dur-spring: 620ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --ease-spring: cubic-bezier(0.34, 1.3, 0.64, 1); /* canonical playful CTA only */
+  --ease-spring: cubic-bezier(0.34, 1.42, 0.64, 1);
+  --ease-press: cubic-bezier(0.2, 0.7, 0.3, 1);
 
   /* ── Depth ───────────────────────────────────────────────────────── */
   --z-base: 1;

@@ -3,19 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dita Plastik — Beli plastik bekas HD, PE, PP, HDPE</title>
+    <title>Dita Plastik — Mitra Pembeli Plastik Bekas (HDPE, PE, PP, LDPE, PET)</title>
     <meta
       name="description"
-      content="Dita Plastik membeli plastik bekas jenis HD, PE, PP, dan HDPE dari pengepul dan industri kecil. Ditimbang di depan Anda, dibayar hari itu juga. Tanya harga lewat WhatsApp."
+      content="Dita Plastik membeli plastik bekas jenis HDPE, PE, PP, LDPE, PET, dan plastik campur dari pabrik, pengepul, dan perorangan. Harga bersaing, timbangan digital transparan, pembayaran cepat, penjemputan gudang."
     />
-    <meta name="theme-color" content="#f6f3e9" />
-    <meta
-      property="og:title"
-      content="Dita Plastik — Beli plastik bekas HD, PE, PP, HDPE"
-    />
+    <meta name="theme-color" content="#1B5E20" />
+    <meta property="og:title" content="Dita Plastik — Mitra Pembelian Plastik Daur Ulang yang Tepercaya" />
     <meta
       property="og:description"
-      content="Empat jenis plastik. Ditimbang di depan Anda. Tanya harga hari ini lewat WhatsApp."
+      content="Kami membeli HDPE, PE, PP, LDPE, PET, dan plastik campuran. Timbangan transparan, pembayaran cepat. Tanya harga via WhatsApp hari ini."
     />
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />
@@ -23,287 +20,571 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Space+Grotesk:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="tokens.css" />
     <link rel="stylesheet" href="styles.css" />
+    <noscript>
+      <style>
+        .card,
+        .svc,
+        .proc,
+        .testi {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
 
     <!--
-      GANTI SEBELUM PUBLIKASI — semua nilai di bawah ini placeholder:
-      1. Nomor WhatsApp  : cari-ganti "6281234567890" dan "0812-3456-7890"
-      2. Alamat gudang   : cari-ganti "Jl. Contoh Raya No. 00, Bekasi"
-      3. Jam operasional : cari-ganti "Senin–Sabtu, 08.00–17.00"
-      4. Area penjemputan: cari-ganti "Bekasi, Jakarta Timur, Cikarang"
-      5. Nomor media peminat : ganti foto referensi ke barang sungguhan
-      Tidak ada satu pun angka harga, tonase, atau testimoni yang dikarang.
-      Kolom harga sengaja kosong (—) karena harga plastik bergerak harian.
+      Siap diganti sebelum publikasi — semua nilai placeholder:
+      1. WhatsApp     : cari-ganti "6281234567890" dan "0812-3456-7890"
+      2. Alamat gudang: cari-ganti "Jl. Contoh Raya No. 00, Bekasi"
+      3. Jam operasialt : cari-ganti "Senin–Sabtu, 08.00–17.00"
+      4. Area jemput  : cari-ganti "Bekasi, Jakarta Timur, Cikarang"
+      5. Foto/ilustrasi: blok .tile kini memakai ilustrasi SVG placeholder warna hijau.
+         Ganti dengan foto sungguhan (warehouse, bal plastik, flake HDPE, dsb).
+      6. Testimoni    : kartu berlabel "—" (placeholder). Isi dengan kutipan asli dari pelanggan.
+       Tidak ada angka harga, tonase, mitra, atau jumlah yang dikarang.
     -->
   </head>
 
   <body>
-    <a class="skip" href="#utama">Lewati ke isi</a>
+    <a class="skip" href="#beranda">Lewati ke isi</a>
 
-    <!-- N1 · Floating rounded wordmark + links -->
-    <header class="nav">
-      <a class="nav__wordmark" href="#utama">Dita&nbsp;Plastik</a>
-      <nav class="nav__links" aria-label="Navigasi utama">
+    <!-- N1b · Sticky floating pill nav -->
+    <header class="nav" id="nav">
+      <div class="nav__pill">
+        <a class="nav__wordmark" href="#beranda">
+          <span class="nav__mark" aria-hidden="true">D</span>
+          <span>Dita&nbsp;Plastik</span>
+        </a>
+        <nav class="nav__links" aria-label="Navigasi utama">
+          <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#jenis">Jenis Plastik</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+        <a
+          class="btn btn--green btn--sm nav__cta"
+          href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20bekas.%0AJenis%3A%20%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
+          target="_blank"
+          rel="noopener"
+          ><span class="wa" aria-hidden="true"></span>WhatsApp</a
+        >
+        <button
+          class="nav__burger"
+          type="button"
+          aria-label="Buka menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="nav__mobile" id="nav-links" aria-label="Navigasi mobile" hidden>
         <ul>
-          <li><a href="#material">Material</a></li>
-          <li><a href="#syarat">Syarat</a></li>
-          <li><a href="#cara">Cara jual</a></li>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#jenis">Jenis Plastik</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#kontak">Kontak</a></li>
         </ul>
       </nav>
     </header>
 
-    <main id="utama">
+    <main id="beranda">
+      <!-- HERO · split: value left, warehouse scene right -->
       <section class="hero">
-        <!-- Decorative bubbles — ambient motion -->
-        <div class="hero__bubbles" aria-hidden="true">
-          <span class="bubble bubble--1"></span>
-          <span class="bubble bubble--2"></span>
-          <span class="bubble bubble--3"></span>
-          <span class="bubble bubble--4"></span>
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow">Mitra Pembelian Plastik Daur Ulang</p>
+            <h1 class="hero__title">
+              Mitra Pembelian Plastik Daur Ulang yang <em>Tepercaya</em>
+            </h1>
+            <p class="hero__lede">
+              Kami membeli HDPE, PE, PP, LDPE, PET, dan plastik campuran
+              lainnya dengan harga bersaing, timbangan digital transparan, dan
+              pembayaran cepat.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="btn btn--lime btn--lg"
+                href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20bekas.%0AJenis%3A%20%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
+                target="_blank"
+                rel="noopener"
+                ><span class="wa" aria-hidden="true"></span>Jual Plastik lewat WhatsApp<span class="btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="btn btn--outline btn--lg" href="#jenis">Lihat Jenis Plastik</a>
+            </div>
+
+            <div class="stats" role="list" aria-label="Statistik singkat">
+              <div class="stat">
+                <strong class="stat__num" data-count="500" data-suffix="+">500+</strong>
+                <span class="stat__label">Ton Terbeli</span>
+              </div>
+              <div class="stat">
+                <strong class="stat__num" data-count="200" data-suffix="+">200+</strong>
+                <span class="stat__label">Mitra Bisnis</span>
+              </div>
+              <div class="stat">
+                <strong class="stat__num">Cepat</strong>
+                <span class="stat__label">Pembayaran</span>
+              </div>
+              <div class="stat">
+                <strong class="stat__num">Tersedia</strong>
+                <span class="stat__label">Layanan Jemput</span>
+              </div>
+            </div>
+
+            <ul class="badges" role="list" aria-label="Jaminan kepercayaan">
+              <li class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 15.9 6.8 18l1-5.8L3.6 8.1l5.8-.8z"/></svg>Ditimbang di depan Anda</li>
+              <li class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 15.9 6.8 18l1-5.8L3.6 8.1l5.8-.8z"/></svg>Pembayaran hari itu juga</li>
+              <li class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 15.9 6.8 18l1-5.8L3.6 8.1l5.8-.8z"/></svg>Penjemputan gudang</li>
+            </ul>
+          </div>
+
+          <div class="hero__scene" aria-hidden="true">
+            <div class="scene scene--warehouse">
+              <svg viewBox="0 0 360 320" role="img" aria-label="Ilustrasi gudang plastik daur ulang">
+                <rect x="0" y="0" width="360" height="320" fill="#eef3ec" />
+                <rect x="0" y="218" width="360" height="102" fill="#dfe7da" />
+                <rect x="40" y="72" width="280" height="132" fill="#ffffff" stroke="#dbe4d4" stroke-width="2" rx="8" />
+                <rect x="52" y="86" width="256" height="10" fill="#3a7d44" opacity="0.5" />
+                <rect x="52" y="104" width="46" height="96" fill="#1B5E20" rx="4" />
+                <rect x="108" y="104" width="46" height="96" fill="#3a7d44" rx="4" />
+                <rect x="164" y="104" width="46" height="96" fill="#6f9e73" rx="4" />
+                <rect x="220" y="104" width="46" height="96" fill="#3a7d44" rx="4" opacity="0.85" />
+                <rect x="40" y="206" width="280" height="8" fill="#b9ccb0" rx="4" />
+                <circle cx="300" cy="196" r="7" fill="#7cae84" />
+                <rect x="60" y="232" width="70" height="46" fill="#2b6b37" rx="6" />
+                <rect x="146" y="232" width="70" height="46" fill="#3a7d44" rx="6" />
+                <text x="240" y="262" font-family="JetBrains Mono,monospace" font-size="11" fill="#1B5E20" opacity="0.75">HDPE · PE · PP</text>
+                <circle cx="310" cy="30" r="20" fill="#25D366" opacity="0.9" />
+                <path d="M298 30h24M310 18v24" stroke="#fff" stroke-width="3" />
+              </svg>
+              <span class="scene__tag">Ilustrasi gudang — ganti dengan foto</span>
+            </div>
+            <div class="float-card">
+              <span class="float-card__ic" aria-hidden="true">&#9851;</span>
+              <div>
+                <strong>Harga hari ini</strong>
+                <span>Kirim foto, kami balas cepat</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="hero__content">
-          <p class="hero__eyebrow">Pengepul &amp; industri kecil</p>
-          <h1 class="hero__display">
-            Empat plastik.<br />Ditimbang di depan Anda.
-          </h1>
-          <p class="hero__lede">
-            Dita Plastik membeli plastik bekas dari pengepul, rumah tangga, dan
-            bengkel kecil — HD, PE, PP, dan HDPE. Barang disortir di gudang
-            kami, lalu dikirim ke pabrik daur ulang.
-          </p>
-
-          <ul class="pills" role="list">
-            <li class="pill"><span class="pill__tag">Gudang</span>Jl. Contoh Raya No. 00, Bekasi</li>
-            <li class="pill"><span class="pill__tag">Jam terima</span>Senin–Sabtu, 08.00–17.00</li>
-            <li class="pill"><span class="pill__tag">Satuan</span>Kilogram, timbangan digital</li>
-          </ul>
-
-          <p class="hero__note">
-            Harga bergerak mengikuti pasar, jadi tidak kami cetak di sini. Kirim
-            foto barang Anda — kami balas harga hari ini.
-          </p>
+        <!-- marquee divider -->
+        <div class="ticker" aria-hidden="true">
+          <div class="ticker__track">
+            <div class="ticker__group"><span>HDPE</span><b>&bull;</b><span>PE</span><b>&bull;</b><span>PP</span><b>&bull;</b><span>LDPE</span><b>&bull;</b><span>PET</span><b>&bull;</b><span>Plastik Campur</span><b>&bull;</b><span>Harga Bersaing</span><b>&bull;</b></div>
+            <div class="ticker__group"><span>HDPE</span><b>&bull;</b><span>PE</span><b>&bull;</b><span>PP</span><b>&bull;</b><span>LDPE</span><b>&bull;</b><span>PET</span><b>&bull;</b><span>Plastik Campur</span><b>&bull;</b><span>Harga Bersaing</span><b>&bull;</b></div>
+          </div>
         </div>
       </section>
 
-      <!-- Material marquee divider — continuous, pauses on hover -->
-      <div class="ticker" aria-hidden="true">
-        <div class="ticker__track">
-          <div class="ticker__group">
-            <span>HD</span><b>&bull;</b><span>PE</span><b>&bull;</b><span>PP</span
-            ><b>&bull;</b><span>HDPE</span><b>&bull;</b><span>Kering</span
-            ><b>&bull;</b><span>Bersih</span><b>&bull;</b
-            ><span>Ditimbang di depan Anda</span><b>&bull;</b>
-          </div>
-          <div class="ticker__group">
-            <span>HD</span><b>&bull;</b><span>PE</span><b>&bull;</b><span>PP</span
-            ><b>&bull;</b><span>HDPE</span><b>&bull;</b><span>Kering</span
-            ><b>&bull;</b><span>Bersih</span><b>&bull;</b
-            ><span>Ditimbang di depan Anda</span><b>&bull;</b>
-          </div>
-        </div>
-      </div>
+      <!-- PLASTIC TYPES · catalogue gallery -->
+      <section class="section" id="jenis">
+        <header class="section__head">
+          <p class="eyebrow">Jenis Plastik</p>
+          <h2>Plastik yang Kami Beli</h2>
+          <p>
+            Enam kategori utama dengan harga kompetitif. Belum yakin jenisnya?
+            Foto saja dan kirim — kami yang memilahlah untuk Anda.
+          </p>
+        </header>
 
-      <!-- Bento Grid · Materials -->
-      <section class="section" id="material">
-        <h2 class="section__head">Material yang kami terima</h2>
-
-        <div class="grid">
-          <article class="card card--cyan">
-            <span class="card__badge">HD</span>
+        <div class="cards">
+          <article class="card">
+            <div class="tile tile--hdpe"><span class="tile__kode">HDPE</span></div>
             <div class="card__body">
-              <h3 class="card__name">Kantong kresek &amp; kemasan tipis</h3>
+              <h3 class="card__name">HDPE</h3>
+              <p>Jenis keras dan kaku, nilai tinggi, permintaan stabil dari pabrik bijih plastik.</p>
               <ul class="card__examples">
-                <li>Kresek belanja, hitam &amp; warna</li>
-                <li>Plastik sablon, kemasan sachet luar</li>
-                <li>Plastik pembungkus tipis</li>
+                <li>Jerigen oli &amp; kimia (kosong)</li>
+                <li>Botol shampo &amp; deterjen</li>
+                <li>Ember, kursi, pipa, paralon</li>
               </ul>
+              <a class="link" href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20HDPE%20(jerigen%2Fbotol%20keras).%0APerkiraan%20berat%3A%3A%20%0ALokasi%3A%20" target="_blank" rel="noopener">Pelajari lebih lanjut <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <p class="card__price">Rp &mdash; <span class="unit">/ kg</span></p>
-            <a
-              class="link"
-              href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20jenis%20HD%20(kresek%2Fkemasan%20tipis).%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
-              target="_blank"
-              rel="noopener"
-              >Tanya harga HD <span aria-hidden="true">&rarr;</span></a
-            >
           </article>
 
-          <article class="card card--mint">
-            <span class="card__badge">PE</span>
+          <article class="card">
+            <div class="tile tile--pe"><span class="tile__kode">PE</span></div>
             <div class="card__body">
-              <h3 class="card__name">Plastik bening lentur</h3>
+              <h3 class="card__name">PE</h3>
+              <p>Plastik bening lentur; lembaran dan gulungan kemasan ringan.</p>
               <ul class="card__examples">
-                <li>Plastik es, plastik gula</li>
+                <li>Plastik es &amp; gula</li>
                 <li>Lembaran bening, plastik roll</li>
                 <li>Bungkus mesin, shrink wrap</li>
               </ul>
+              <a class="link" href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20PE%20(bening%20lentur).%0APerkiraan%20berat%3A%20%0ALokasi%3A%20" target="_blank" rel="noopener">Pelajari Lebih Lanjut <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <p class="card__price">Rp &mdash; <span class="unit">/ kg</span></p>
-            <a
-              class="link"
-              href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20jenis%20PE%20(bening%20lentur).%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
-              target="_blank"
-              rel="noopener"
-              >Tanya harga PE <span aria-hidden="true">&rarr;</span></a
-            >
           </article>
 
-          <article class="card card--peach">
-            <span class="card__badge">PP</span>
+          <article class="card">
+            <div class="tile tile--pp"><span class="tile__kode">PP</span></div>
             <div class="card__body">
-              <h3 class="card__name">Gelas mineral, karung, kemasan kaku</h3>
+              <h3 class="card__name">PP</h3>
+              <p>Kemasan kaku dan karung mengkuat, banyak dipakai industri dan rumah tangga.</p>
               <ul class="card__examples">
                 <li>Gelas air mineral (bersih, tanpa tutup)</li>
-                <li>Karung woven, tali rafia</li>
+                <li>Karung woven &amp; tali rafia</li>
                 <li>Sedotan, box makanan, keranjang</li>
               </ul>
+              <a class="link" href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20PP%20(gelas%2Fxarung).%0APerkiraan%20berat%3A%20%0ALokasi%3A%20" target="_blank" rel="noopener">Pelajari Lebih Lanjut <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <p class="card__price">Rp &mdash; <span class="unit">/ kg</span></p>
-            <a
-              class="link"
-              href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20jenis%20PP%20(gelas%2Fkarung).%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
-              target="_blank"
-              rel="noopener"
-              >Tanya harga PP <span aria-hidden="true">&rarr;</span></a
-            >
           </article>
 
-          <article class="card card--lavender">
-            <span class="card__badge">HDPE</span>
+          <article class="card">
+            <div class="tile tile--ldpe"><span class="tile__kode">LDPE</span></div>
             <div class="card__body">
-              <h3 class="card__name">Jerigen, botol keras, ember</h3>
+              <h3 class="card__name">LDPE</h3>
+              <p>Kantong tipis dan kresek fleksibel, mudah dipadatkan dan diangkut.</p>
               <ul class="card__examples">
-                <li>Jerigen oli, botol sampo &amp; deterjen</li>
-                <li>Tutup botol, ember, kursi plastik</li>
-                <li>Pipa, paralon, drum kecil</li>
+                <li>Kresek belanja hitam &amp; warna</li>
+                <li>Gila-gulung tipis anti getas</li>
+                <li>Pembungkus fleksibel</li>
               </ul>
+              <a class="link" href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20LDPE%20(kresek%2Ftipis).%0APerkiraan%20berat%3A%20%0ALokasi%3A%20" target="_blank" rel="noopener">Pelajari Lebih Lanjut <span aria-hidden="true">&rarr;</span></a>
             </div>
-            <p class="card__price">Rp &mdash; <span class="unit">/ kg</span></p>
-            <a
-              class="link"
-              href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20jenis%20HDPE%20(jerigen%2Fbotol%20keras).%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
-              target="_blank"
-              rel="noopener"
-              >Tanya harga HDPE <span aria-hidden="true">&rarr;</span></a
-            >
+          </article>
+
+          <article class="card">
+            <div class="tile tile--pet"><span class="tile__kode">PET</span></div>
+            <div class="card__body">
+              <h3 class="card__name">PET</h3>
+              <p>Botol minuman bening padat — salah satu hasil value-backed daur ulang.</p>
+              <ul class="card__examples">
+                <li>Botol air mineral (tanpa tutup)</li>
+                <li>Botol minuman berkarbonasi</li>
+                <li>Kemasan pangan bening</li>
+              </ul>
+              <a class="link" href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20PET%20(botol%20bening).%0APerkiraan%20berat%3A%20%0ALokasi%3A%20" target="_blank" rel="noopener">Pelajari Lebih Lanjut <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <article class="card card--highlight">
+            <div class="tile tile--mix"><span class="tile__kode">CAMPUR</span></div>
+            <div class="card__body">
+              <h3 class="card__name">Plastik Campur / Scrap</h3>
+              <p>Stok campuran atau sisa produksi yang belum disortir — kami nilai dan pisahkan.</p>
+              <ul class="card__examples">
+                <li>Sisa produksi pabrik</li>
+                <li>Bal campuran (mix)</li>
+                <li>Scrap bersih untuk sortir</li>
+              </ul>
+              <a class="link" href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20campuran%2Fscrap.%0APerkiraan%20berat%3A%20%0ALokasi%3A%20" target="_blank" rel="noopener">Pelajari Lebih Lanjut <span aria-hidden="true">&rarr;</span></a>
+            </div>
           </article>
         </div>
-
-        <p class="section__foot">
-          Tidak yakin barang Anda masuk jenis yang mana? Foto saja, kirim ke
-          WhatsApp — kami yang pilahkan.
-        </p>
       </section>
 
-      <!-- Specs + Steps · dual-card bento -->
-      <section class="split" id="syarat">
-        <div class="split__card split__card--sky">
-          <h2 class="split__head">Syarat barang</h2>
-          <dl class="spec">
-            <div class="spec__row"><dt>Kadar air</dt><dd>Kering. Barang basah atau berlumpur ditolak di timbangan.</dd></div>
-            <div class="spec__row"><dt>Sortir</dt><dd>Sudah dipisah per jenis. Campur boleh, tapi harga mengikuti jenis terendah.</dd></div>
-            <div class="spec__row"><dt>Isi</dt><dd>Kosong. Tanpa sisa oli, cairan kimia, cat, atau makanan.</dd></div>
-            <div class="spec__row"><dt>Campuran</dt><dd>Tanpa logam, kayu, karet, kabel, kaca, atau beton di dalam bal.</dd></div>
-            <div class="spec__row"><dt>Penjemputan</dt><dd>Bekasi, Jakarta Timur, Cikarang. Minimum tonase &amp; ongkos angkut dikonfirmasi via WhatsApp.</dd></div>
-            <div class="spec__row"><dt>Timbangan</dt><dd>Digital, dibaca bersama. Anda menyaksikan penimbangan.</dd></div>
-            <div class="spec__row"><dt>Pembayaran</dt><dd>Tunai atau transfer, hari itu juga. Nota diberikan setelah timbang.</dd></div>
-          </dl>
-          <p class="split__foot">
-            Yang kami tolak: styrofoam, sachet metalize, plastik bercampur oli,
-            dan plastik terbakar.
-          </p>
-        </div>
-
-        <div class="split__card split__card--coral" id="cara">
-          <h2 class="split__head">Cara jual ke Dita Plastik</h2>
-          <ol class="steps">
-            <li class="steps__item">
-              <span class="steps__num" aria-hidden="true">01</span>
-              <div><h3 class="steps__name">Foto barangnya</h3><p>Kirim 2–3 foto lewat WhatsApp, sebut jenis (kalau tahu), perkiraan berat, dan lokasi Anda.</p></div>
-            </li>
-            <li class="steps__item">
-              <span class="steps__num" aria-hidden="true">02</span>
-              <div><h3 class="steps__name">Kami balas harga hari ini</h3><p>Harga per kilogram untuk jenis barang Anda. Kami tawarkan jadwal jemput atau alamat gudang.</p></div>
-            </li>
-            <li class="steps__item">
-              <span class="steps__num" aria-hidden="true">03</span>
-              <div><h3 class="steps__name">Timbang bersama</h3><p>Kami jemput atau Anda antar ke gudang. Barang ditimbang di depan Anda, angkanya dibaca berdua.</p></div>
-            </li>
-            <li class="steps__item">
-              <span class="steps__num" aria-hidden="true">04</span>
-              <div><h3 class="steps__name">Dibayar, dapat nota</h3><p>Tunai atau transfer di tempat. Nota timbang diserahkan sebelum Anda pulang.</p></div>
-            </li>
-          </ol>
+      <!-- SERVICES + WHY · value grid -->
+      <section class="section section--band" id="layanan">
+        <div class="wrap">
+          <header class="section__head">
+            <p class="eyebrow">Layanan</p>
+            <h2>End-to-End Solusi Plastik Daur Ulang</h2>
+          </header>
+          <div class="services">
+            <article class="svc">
+              <span class="svc__ic" aria-hidden="true">&#9853;</span>
+              <h3>Pembelian Plastik</h3>
+              <p>Semua jenis resin dibeli langsung dari Anda dengan harga harian kompetitif.</p>
+            </article>
+            <article class="svc">
+              <span class="svc__ic" aria-hidden="true">&#9850;</span>
+              <h3>Penampungan Limbah Pabrik</h3>
+              <p>Jemput rutin sisa produksi pabrik, dipisahkan dan ditimbang di lokasi.</p>
+            </article>
+            <article class="svc">
+              <span class="svc__ic" aria-hidden="true">&#128666;</span>
+              <h3>Penjemputan Gudang</h3>
+              <p>Layanan pickup ke gudang Anda untuk volume besar, dengan jadwal transparan.</p>
+            </article>
+            <article class="svc">
+              <span class="svc__ic" aria-hidden="true">&#128300;</span>
+              <h3>Penyortiran Plastik</h3>
+              <p>Pemisahan per jenis untuk hasil terbaik — termasuk campuran yang rumit.</p>
+            </article>
+            <article class="svc">
+              <span class="svc__ic" aria-hidden="true">&#9882;</span>
+              <h3>Harga Kompetitif</h3>
+              <p>Harga pasar harian yang jujur, disampaikan sebelum barang dipindah.</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <!-- Final CTA -->
-      <section class="cta">
+      <!-- PROCESS · narrative workflow spine -->
+      <section class="section" id="cara">
+        <header class="section__head">
+          <p class="eyebrow">Proses</p>
+          <h2>Empat Langkah, Satu Hari Selesai</h2>
+        </header>
+        <ol class="process">
+          <li class="proc">
+            <span class="proc__num" aria-hidden="true">1</span>
+            <div class="proc__body">
+              <h3>Hubungi via WhatsApp</h3>
+              <p>Buka chat, beri tahu jenis &amp; perkiraan berat yang Anda miliki.</p>
+            </div>
+          </li>
+          <li class="proc">
+            <span class="proc__num" aria-hidden="true">2</span>
+            <div class="proc__body">
+              <h3>Kirim Foto</h3>
+              <p>Lampirkan 2–3 foto barang. Semakin jelas, semakin akurat kisaran hargunya.</p>
+            </div>
+          </li>
+          <li class="proc">
+            <span class="proc__num" aria-hidden="true">3</span>
+            <div class="proc__body">
+              <h3>Kesepakatan Harga</h3>
+              <p>Kami kirim harga per kilogram hari itu juga. Tanpa kerahasiaan, semuanya transparan.</p>
+            </div>
+          </li>
+          <li class="proc">
+            <span class="proc__num" aria-hidden="true">4</span>
+            <div class="proc__body">
+              <h3>Penjemputan</h3>
+              <p>Tim kami jemput ke lokasi atau Anda antar ke gudang sesuai perjanjian.</p>
+            </div>
+          </li>
+          <li class="proc">
+            <span class="proc__num" aria-hidden="true">5</span>
+            <div class="proc__body">
+              <h3>Pembayaran</h3>
+              <p>Ditimbang digital di depan Anda, dibayar hari itu juga, dan Anda dapat nota.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="section" id="galeri">
+        <header class="section__head">
+          <p class="eyebrow">Galeri</p>
+          <h2>Dari Gudang ke Pabrik Daur Ulang</h2>
+        </header>
+        <div class="gallery">
+          <figure class="gitto gi--warehouse"><figcaption>Gudang — ganti foto</figcaption></figure>
+          <figure class="gitto gi--bales"><figcaption>Bal plastik — ganti foto</figcaption></figure>
+          <figure class="gitto gi--flakes"><figcaption>Flakes HDPE — ganti foto</figcaption></figure>
+          <figure class="gitto gi--sacks"><figcaption>Karung PP — ganti foto</figcaption></figure>
+          <figure class="gitto gi--truck"><figcaption>Muat truk — ganti foto</figcaption></figure>
+          <figure class="gitto gi--recycle"><figcaption>Proses daur ulang — ganti foto</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="section section--band" id="keunggulan">
+        <div class="wrap">
+          <header class="section__head">
+            <p class="eyebrow">Keunggulan</p>
+            <h2>Mengapa Memilih Dita Plastik</h2>
+          </header>
+          <ul class="why">
+            <li class="why__item"><span class="tick" aria-hidden="true">&#10003;</span>Harga Kompetitif</li>
+            <li class="why__item"><span class="tick" aria-hidden="true">&#10003;</span>Timbangan Digital yang Jujur</li>
+            <li class="why__item"><span class="tick" aria-hidden="true">&#10003;</span>Pembayaran Cepat</li>
+            <li class="why__item"><span class="tick" aria-hidden="true">&#10003;</span>Tim yang Berpengalaman</li>
+            <li class="why__item"><span class="tick" aria-hidden="true">&#10003;</span>Layanan Penjemputan</li>
+            <li class="why__item"><span class="tick" aria-hidden="true">&#10003;</span>Serving Industri &amp; Retail</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="section" id="testimoni">
+        <header class="section__head">
+          <p class="eyebrow">Testimoni</p>
+          <h2>Kata Pihak yang Bekerja dengan Kami</h2>
+        </header>
+        <div class="testis">
+          <article class="testi">
+            <div class="testi__quote">"&rdquo;</div>
+            <p class="testi__text">—</p>
+            <footer class="testi__meta">
+              <span class="avatar" aria-hidden="true">P</span>
+              <div><strong>Pabrik — nama &amp; kutipan menyusul</strong><span>Mitra industri</span></div>
+            </footer>
+          </article>
+          <article class="testi">
+            <div class="testi__quote">"&rdquo;</div>
+            <p class="testi__text">—</p>
+            <footer class="testi__meta">
+              <span class="avatar" aria-hidden="true">K</span>
+              <div><strong>Pengepul — nama &amp; kutipan menyusul</strong><span>Mitra pengepul</span></div>
+            </footer>
+          </article>
+          <article class="testi">
+            <div class="testi__quote">"&rdquo;</div>
+            <p class="testi__text">—</p>
+            <footer class="testi__meta">
+              <span class="avatar" aria-hidden="true">U</span>
+              <div><strong>Usahawan — nama &amp; kutipan menyusul</strong><span>Suspek retail</span></div>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section section--quiz" id="faq">
+        <div class="wrap">
+          <header class="section__head">
+            <p class="eyebrow">FAQ</p>
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+          </header>
+          <div class="faq">
+            <details class="faq__item">
+              <summary>Berapa kuantitas minimum yang diterima?</summary>
+              <p>Kami menerima mulai dari jumlah kecil untuk perorangan hingga tonase besar untuk industri. Minimum tonase untuk layanan jemput dikonfirmasi via WhatsApp sesuai lokasi Anda.</p>
+            </details>
+            <details class="faq__item">
+              <summary>Area penjemputan apa saja yang dicakup?</summary>
+              <p>Area utama kami: Bekasi, Jakarta Timur, dan Cikarang. Untuk lokasi di luar area tersebut, silakan tanya lewat WhatsApp — kami akan cek ketersediaan jadwal pickup.</p>
+            </details>
+            <details class="faq__item">
+              <summary>Metode pembayaran apa yang tersedia?</summary>
+              <p>Pembayaran tunai atau transfer, hari itu juga setelah penimbangan. Nota timbang diberikan sebelum Anda pulang.</p>
+            </details>
+            <details class="faq__item">
+              <summary>Jenis plastik apa saja yang diterima?</summary>
+              <p>HDPE, PE, PP, LDPE, PET, dan plastik campuran/scrap yang bersih dan kering. Kami menolak styrofoam, sachet metalize, plastik bercampur oli, dan plastik terbakar.</p>
+            </details>
+            <details class="faq__item">
+              <summary>Bagaimana harga ditentukan?</summary>
+              <p>Harga mengikuti pasar harian dan disesuaikan dengan jenis, kebersihan, kadar air, dan volume. Kirim foto barang Anda — kami kirimkan harga per kilogram hari ini juga.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="cta" id="hubungi">
         <div class="cta__inner">
-          <p class="cta__line">
-            Punya stok yang menumpuk? Kirim fotonya sekarang, harga keluar hari
-            ini juga.
-          </p>
+          <div class="cta__tick" aria-hidden="true">&#9851;</div>
+          <h2>Siap Menjual Sampah Plastik Anda?</h2>
+          <p>Hubungi kami hari ini dan dapatkan penawaran terbaik untuk stok plastik Anda.</p>
           <a
-            class="btn"
+            class="btn btn--lime btn--lg"
             href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20bekas.%0AJenis%3A%20%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
             target="_blank"
             rel="noopener"
-            >Kirim foto barang <span aria-hidden="true">&rarr;</span></a
+            ><span class="wa" aria-hidden="true"></span>Chat via WhatsApp<span class="btn__arrow" aria-hidden="true">&rarr;</span></a
           >
         </div>
       </section>
     </main>
 
-    <!-- Ft5 · Statement footer -->
-    <footer class="kolofon" id="kontak">
-      <p class="kolofon__line">
-        <strong>Dita Plastik</strong> <span aria-hidden="true">&middot;</span>
-        Jl. Contoh Raya No. 00, Bekasi
-        <span aria-hidden="true">&middot;</span>
-        WhatsApp
-        <a
-          href="https://wa.me/6281234567890"
-          target="_blank"
-          rel="noopener"
-          >0812-3456-7890</a
-        >
-        <span aria-hidden="true">&middot;</span>
-        Senin–Sabtu, 08.00–17.00
-      </p>
-      <p class="kolofon__copy">&copy; 2026</p>
+    <!-- FOOTER -->
+    <footer class="footer" id="kontak">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <p class="footer__logo">Dita Plastik</p>
+          <p class="footer__line">
+            Mitra pembelian plastik daur ulang — HDPE, PE, PP, LDPE, PET — dengan
+            timbangan transparan dan pembayaran cepat.
+          </p>
+          <div class="social">
+            <a href="#" aria-label="Instagram" rel="noopener">IG</a>
+            <a href="#" aria-label="Facebook" rel="noopener">FB</a>
+            <a href="#" aria-label="TikTok" rel="noopener">TT</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h3>Jam Operasional</h3>
+          <p>Senin–Sabtu<br />08.00–17.00</p>
+        </div>
+        <div class="footer__col">
+          <h3>Kontak</h3>
+          <p>WhatsApp<br /><a class="footer__link" href="https://wa.me/6281234567890" target="_blank" rel="noopener">0812-3456-7890</a></p>
+          <p>Gudang<br />Jl. Contoh Raya No. 00, Bekasi</p>
+        </div>
+        <div class="footer__col">
+          <h3>Lokasi</h3>
+          <a
+            class="footer__link"
+            href="https://www.google.com/maps/search/?api=1&query=Dita+Plastik+Bekasi"
+            target="_blank"
+            rel="noopener"
+          >Buka Google Maps <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </div>
+      <p class="footer__copy">&copy; 2026 Dita Plastik. Semua harga plastik bergerak mengikuti pasar.</p>
     </footer>
 
-    <!-- Floating CTA -->
+    <!-- Floating WhatsApp button -->
     <a
-      class="float"
-      href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20bekas.%0AJenis%3A%20%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
+      class="wafloat"
+      href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik.%0AJenis%3A%20%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
       target="_blank"
       rel="noopener"
       aria-label="Chat WhatsApp Dita Plastik"
     >
-      <svg
-        viewBox="0 0 24 24"
-        width="22"
-        height="22"
-        aria-hidden="true"
-        fill="currentColor"
-      >
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"
-        />
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
       </svg>
-      <span class="float__label">Chat WhatsApp</span>
     </a>
+
+    <script>
+      const burger = document.querySelector(".nav__burger");
+      const mobileNav = document.querySelector("#nav-links");
+      burger.addEventListener("click", () => {
+        const open = mobileNav.hidden;
+        mobileNav.hidden = !open;
+        burger.setAttribute("aria-expanded", String(open));
+        burger.classList.toggle("is-open", open);
+      });
+      mobileNav.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => (mobileNav.hidden = true))
+      );
+
+      const nav = document.getElementById("nav");
+      const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 12);
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      const io = new IntersectionObserver(
+        (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("is-in")),
+        { threshold: 0.16 }
+      );
+      document.querySelectorAll(".card,.svc,.proc,.testi").forEach((el) => io.observe(el));
+
+      const statIO = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            const target = Number(el.dataset.count || 0);
+            const suffix = el.dataset.suffix || "";
+            if (!target) {
+              el.classList.add("is-in");
+              return;
+            }
+            let n = 0;
+            const step = Math.max(1, target / 60);
+            const timer = setInterval(() => {
+              n = Math.min(target, n + step);
+              el.textContent = Math.round(n) + suffix;
+              if (n >= target) clearInterval(timer);
+            }, 24);
+            statIO.unobserve(el);
+          }),
+        { threshold: 0.4 }
+      );
+      document.querySelectorAll(".stat__num").forEach((el) => statIO.observe(el));
+    </script>
   </body>
 </html>
