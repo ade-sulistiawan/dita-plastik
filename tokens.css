@@ -1,0 +1,79 @@
+/* Hallmark · tokens · genre: editorial · theme: Almanac
+ * axes — paper band: light (96.5%) · display style: roman-serif · accent hue: warm (45°)
+ * anchor hue 65 (kraft / manila). Every colour and font in the build references a name here.
+ */
+
+:root {
+  /* ── Paper & ink ────────────────────────────────────────────────── */
+  --color-paper: oklch(96.5% 0.012 68);
+  --color-paper-2: oklch(93.5% 0.014 68);
+  --color-paper-3: oklch(90% 0.016 66);
+  --color-rule: oklch(84% 0.012 66);
+  --color-rule-2: oklch(72% 0.014 62);
+  --color-neutral: oklch(
+    58% 0.012 60
+  ); /* rules & marks only — 3.1:1, never body text */
+  --color-muted: oklch(43% 0.014 58);
+  --color-ink-2: oklch(32% 0.014 55);
+  --color-ink: oklch(21% 0.016 52);
+
+  /* ── Accent — stamp-ink orange. Kept under 3% of any viewport. ──── */
+  --color-accent: oklch(52% 0.165 45); /* rules, underlines, marks */
+  --color-accent-deep: oklch(
+    42% 0.145 42
+  ); /* accent-coloured text & fills — 5.4:1 */
+  --color-accent-ink: oklch(97% 0.008 60); /* text ON an accent fill */
+  --color-focus: oklch(55% 0.19 45);
+
+  /* ── Type ───────────────────────────────────────────────────────── */
+  --font-display: "Newsreader", ui-serif, Georgia, serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+
+  /* Major third, 1.25, from a 16px body. */
+  --text-xs: 0.64rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.9531rem;
+  --text-2xl: 2.4414rem;
+  --text-3xl: 3.0518rem;
+  --text-display-s: clamp(1.75rem, 3.2vw + 0.75rem, 2.75rem);
+  --text-display: clamp(2.25rem, 4.4vw + 0.85rem, 3.75rem);
+
+  /* ── Space — 4pt base ───────────────────────────────────────────── */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+  --page-gutter: clamp(1.125rem, 4vw, 3.5rem);
+  --measure: 62ch;
+  --bar-height: 4.5rem;
+
+  /* ── Rules & radii — Almanac is square ──────────────────────────── */
+  --rule-hair: 1px;
+  --rule-thick: 2px;
+  --radius-none: 0;
+  --radius-xs: 2px;
+
+  /* ── Motion — Almanac runs at 0.85×, functional like a reference book */
+  --dur-micro: 100ms;
+  --dur-short: 190ms;
+  --dur-long: 360ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ── Depth ──────────────────────────────────────────────────────── */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky: 200;
+  --shadow-hairline: 0 -1px 0 0 oklch(30% 0.014 55 / 0.1);
+}
