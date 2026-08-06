@@ -8,7 +8,7 @@
       name="description"
       content="Dita Plastik membeli plastik bekas jenis HD, PE, PP, dan HDPE dari pengepul dan industri kecil. Ditimbang di depan Anda, dibayar hari itu juga. Tanya harga lewat WhatsApp."
     />
-    <meta name="theme-color" content="#f4efe6" />
+    <meta name="theme-color" content="#f2f1de" />
     <meta
       property="og:title"
       content="Dita Plastik — Beli plastik bekas HD, PE, PP, HDPE"
@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&family=Newsreader:opsz,wght@6..72,400;6..72,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Sans:wght@400;600&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="tokens.css" />
@@ -34,8 +34,7 @@
       1. Nomor WhatsApp  : cari-ganti "6281234567890" dan "0812-3456-7890"
       2. Alamat gudang   : cari-ganti "Jl. Contoh Raya No. 00, Bekasi"
       3. Jam operasional : cari-ganti "Senin–Sabtu, 08.00–17.00"
-      4. Tanggal edisi   : cari-ganti "31 JULI 2026" (dan atribut datetime)
-      5. Area penjemputan: cari-ganti "Bekasi, Jakarta Timur, Cikarang"
+      4. Area penjemputan: cari-ganti "Bekasi, Jakarta Timur, Cikarang"
       Tidak ada satu pun angka harga, tonase, atau testimoni yang dikarang di
       halaman ini. Kolom harga sengaja kosong (—) karena harga plastik bergerak
       harian; itulah alasan pembaca menekan tombol WhatsApp.
@@ -45,17 +44,10 @@
   <body>
     <a class="skip" href="#utama">Lewati ke isi</a>
 
-    <!-- N6 · Newspaper masthead — issue line above wordmark, double rule below -->
-    <header class="mast">
-      <p class="mast__issue">
-        Daftar terima
-        <span aria-hidden="true">·</span>
-        <time datetime="2026-07-31">Edisi 31 Juli 2026</time>
-        <span aria-hidden="true">·</span>
-        Gudang Bekasi
-      </p>
-      <a class="mast__name" href="#utama">Dita Plastik</a>
-      <nav class="mast__nav" aria-label="Navigasi utama">
+    <!-- N9 · Edge-aligned minimal — wordmark hard-left, links hard-right -->
+    <header class="nav">
+      <a class="nav__wordmark" href="#utama">Dita Plastik</a>
+      <nav class="nav__links" aria-label="Navigasi utama">
         <ul>
           <li><a href="#material">Material</a></li>
           <li><a href="#syarat">Syarat</a></li>
@@ -63,16 +55,16 @@
           <li><a href="#kontak">Kontak</a></li>
         </ul>
       </nav>
-      <hr class="mast__rule" aria-hidden="true" />
     </header>
 
     <main id="utama">
-      <!-- Pembuka — inventory header. Catalogue: brand + tagline, no big display. -->
-      <section class="opening" id="pembuka">
-        <h1 class="opening__line">
-          Empat jenis plastik. Ditimbang di depan Anda.
+      <!-- 03 · Marquee hero — the statement IS the fold. No CTA here;
+           the floating button bottom-right owns the action. -->
+      <section class="hero" id="pembuka">
+        <h1 class="hero__display">
+          Empat jenis plastik.<br />Ditimbang di depan Anda.
         </h1>
-        <p class="opening__lede">
+        <p class="hero__lede">
           Dita Plastik membeli plastik bekas dari pengepul, rumah tangga, dan
           bengkel kecil — HD, PE, PP, dan HDPE. Barang disortir di gudang kami,
           lalu dikirim ke pabrik daur ulang.
@@ -93,23 +85,31 @@
           </div>
         </dl>
 
-        <p class="opening__note">
+        <p class="hero__note">
           Harga bergerak mengikuti pasar, jadi tidak kami cetak di sini. Kirim
           foto barang Anda — kami balas harga hari ini.
         </p>
-
-        <a
-          class="phone"
-          href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20bekas.%0AJenis%3A%20%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
-          target="_blank"
-          rel="noopener"
-        >
-          <span class="phone__label">WhatsApp</span>
-          <span class="phone__number">0812-3456-7890</span>
-        </a>
       </section>
 
-      <!-- F6 · Product card grid — 4 grades, uniform rhythm. Swatch is Tier-A pure CSS. -->
+      <!-- Carnival signature 7 · marquee ticker — the hero's hard divider -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <div class="ticker__group">
+            <span>HD</span><b>◆</b><span>PE</span><b>◆</b><span>PP</span
+            ><b>◆</b><span>HDPE</span><b>◆</b><span>Kering</span><b>◆</b
+            ><span>Bersih</span><b>◆</b><span>Ditimbang di depan Anda</span
+            ><b>◆</b>
+          </div>
+          <div class="ticker__group">
+            <span>HD</span><b>◆</b><span>PE</span><b>◆</b><span>PP</span
+            ><b>◆</b><span>HDPE</span><b>◆</b><span>Kering</span><b>◆</b
+            ><span>Bersih</span><b>◆</b><span>Ditimbang di depan Anda</span
+            ><b>◆</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- F6 · Product card grid — 4 grades, uniform rhythm, halftone swatches -->
       <section class="section" id="material">
         <h2 class="section__head">Material yang kami terima</h2>
 
@@ -204,59 +204,62 @@
         </p>
       </section>
 
-      <!-- F3 · Tabular spec sheet — key/value, hairline every row, tabular nums -->
-      <section class="section" id="syarat">
-        <h2 class="section__head">Syarat barang</h2>
+      <!-- F3 · Tabular spec sheet — full magenta band, paper text -->
+      <section class="band band--magenta" id="syarat">
+        <div class="band__inner">
+          <h2 class="section__head">Syarat barang</h2>
 
-        <dl class="spec">
-          <div class="spec__row">
-            <dt>Kadar air</dt>
-            <dd>Kering. Barang basah atau berlumpur ditolak di timbangan.</dd>
-          </div>
-          <div class="spec__row">
-            <dt>Sortir</dt>
-            <dd>
-              Sudah dipisah per jenis. Campur boleh, tapi harga mengikuti jenis
-              terendah.
-            </dd>
-          </div>
-          <div class="spec__row">
-            <dt>Isi</dt>
-            <dd>Kosong. Tanpa sisa oli, cairan kimia, cat, atau makanan.</dd>
-          </div>
-          <div class="spec__row">
-            <dt>Campuran</dt>
-            <dd>
-              Tanpa logam, kayu, karet, kabel, kaca, atau beton di dalam bal.
-            </dd>
-          </div>
-          <div class="spec__row">
-            <dt>Penjemputan</dt>
-            <dd>
-              Bekasi, Jakarta Timur, Cikarang. Minimum tonase dan ongkos angkut
-              <span class="pending">dikonfirmasi via WhatsApp</span>.
-            </dd>
-          </div>
-          <div class="spec__row">
-            <dt>Timbangan</dt>
-            <dd>Digital, dibaca bersama. Anda menyaksikan penimbangan.</dd>
-          </div>
-          <div class="spec__row">
-            <dt>Pembayaran</dt>
-            <dd>
-              Tunai atau transfer, hari itu juga. Nota diberikan setelah
-              timbang.
-            </dd>
-          </div>
-        </dl>
+          <dl class="spec">
+            <div class="spec__row">
+              <dt>Kadar air</dt>
+              <dd>Kering. Barang basah atau berlumpur ditolak di timbangan.</dd>
+            </div>
+            <div class="spec__row">
+              <dt>Sortir</dt>
+              <dd>
+                Sudah dipisah per jenis. Campur boleh, tapi harga mengikuti jenis
+                terendah.
+              </dd>
+            </div>
+            <div class="spec__row">
+              <dt>Isi</dt>
+              <dd>Kosong. Tanpa sisa oli, cairan kimia, cat, atau makanan.</dd>
+            </div>
+            <div class="spec__row">
+              <dt>Campuran</dt>
+              <dd>
+                Tanpa logam, kayu, karet, kabel, kaca, atau beton di dalam bal.
+              </dd>
+            </div>
+            <div class="spec__row">
+              <dt>Penjemputan</dt>
+              <dd>
+                Bekasi, Jakarta Timur, Cikarang. Minimum tonase dan ongkos angkut
+                <span class="pending">dikonfirmasi via WhatsApp</span>.
+              </dd>
+            </div>
+            <div class="spec__row">
+              <dt>Timbangan</dt>
+              <dd>Digital, dibaca bersama. Anda menyaksikan penimbangan.</dd>
+            </div>
+            <div class="spec__row">
+              <dt>Pembayaran</dt>
+              <dd>
+                Tunai atau transfer, hari itu juga. Nota diberikan setelah
+                timbang.
+              </dd>
+            </div>
+          </dl>
 
-        <p class="section__foot">
-          Yang tidak kami terima: styrofoam, plastik kemasan berlapis alumunium
-          (sachet metalize), plastik bercampur oli, dan plastik terbakar.
-        </p>
+          <p class="section__foot">
+            Yang tidak kami terima: styrofoam, plastik kemasan berlapis
+            alumunium (sachet metalize), plastik bercampur oli, dan plastik
+            terbakar.
+          </p>
+        </div>
       </section>
 
-      <!-- F4 · Step sequence — 01/02/03/04, vertical stack, connector line. Genuinely ordinal. -->
+      <!-- F4 · Step sequence — 01/02/03/04, vertical stack, diamond rail -->
       <section class="section" id="cara">
         <h2 class="section__head">Cara jual ke Dita Plastik</h2>
 
@@ -296,9 +299,9 @@
         </ol>
       </section>
 
-      <!-- C1 · Outlined chip, knob: shape=slab, density=spacious, adornment=arrow -->
-      <section class="ajakan">
-        <div class="ajakan__inner">
+      <!-- C1 · Final CTA strip — full lime band, ink text -->
+      <section class="band band--lime">
+        <div class="band__inner ajakan">
           <p class="ajakan__line">
             Punya stok yang menumpuk? Kirim fotonya sekarang, harga keluar hari
             ini juga.
@@ -314,48 +317,46 @@
       </section>
     </main>
 
-    <!-- Ft4 · Dense colophon — mono, log-style -->
+    <!-- Ft2 · Inline single line — ink band closes the page -->
     <footer class="kolofon" id="kontak">
-      <p class="kolofon__block">
-        <strong>Dita Plastik</strong> — jual beli plastik bekas HD, PE, PP,
-        HDPE. Jl. Contoh Raya No. 00, Bekasi, Jawa Barat. Terima barang
-        Senin–Sabtu, 08.00–17.00. Minggu &amp; hari libur nasional tutup.
+      <p class="kolofon__line">
+        <strong>Dita Plastik</strong> <span aria-hidden="true">◆</span>
+        Jl. Contoh Raya No. 00, Bekasi
+        <span aria-hidden="true">◆</span>
         WhatsApp
-        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener"
+        <a
+          href="https://wa.me/6281234567890"
+          target="_blank"
+          rel="noopener"
           >0812-3456-7890</a
-        >. Penjemputan: Bekasi, Jakarta Timur, Cikarang. Harga per kilogram
-        mengikuti harga pasar dan dikonfirmasi per transaksi — halaman ini tidak
-        mencantumkan harga tetap. Daftar terima edisi
-        <time datetime="2026-07-31">31 Juli 2026</time>. &copy; 2026 Dita
-        Plastik.
+        >
+        <span aria-hidden="true">◆</span>
+        Senin–Sabtu, 08.00–17.00
+        <span aria-hidden="true">◆</span>
+        &copy; 2026
       </p>
     </footer>
 
-    <!-- C4 · Sticky bottom bar — mobile only, reveal after fold -->
-    <aside class="bar" id="bar" aria-label="Hubungi Dita Plastik">
-      <span class="bar__text">Harga hari ini</span>
-      <a
-        class="bar__cta"
-        href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20bekas.%0AJenis%3A%20%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
-        target="_blank"
-        rel="noopener"
-        >Chat WhatsApp</a
+    <!-- Floating CTA — always visible, bottom right, every viewport -->
+    <a
+      class="float"
+      href="https://wa.me/6281234567890?text=Halo%20Dita%20Plastik%2C%20saya%20mau%20jual%20plastik%20bekas.%0AJenis%3A%20%0APerkiraan%20berat%3A%20%0ALokasi%3A%20"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat WhatsApp Dita Plastik"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        width="22"
+        height="22"
+        aria-hidden="true"
+        fill="currentColor"
       >
-    </aside>
-
-    <script>
-      // bar-reveal — the only scripted motion on the page.
-      (function () {
-        var bar = document.getElementById("bar");
-        var opening = document.getElementById("pembuka");
-        if (!bar || !opening || !("IntersectionObserver" in window)) return;
-        new IntersectionObserver(
-          function (entries) {
-            bar.classList.toggle("is-shown", !entries[0].isIntersecting);
-          },
-          { rootMargin: "0px 0px -60% 0px" },
-        ).observe(opening);
-      })();
-    </script>
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"
+        />
+      </svg>
+      <span class="float__label">Chat WhatsApp</span>
+    </a>
   </body>
 </html>

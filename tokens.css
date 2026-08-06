@@ -1,34 +1,33 @@
-/* Hallmark · tokens · genre: editorial · theme: Almanac
- * axes — paper band: light (96.5%) · display style: roman-serif · accent hue: warm (45°)
- * anchor hue 65 (kraft / manila). Every colour and font in the build references a name here.
+/* Hallmark · tokens · genre: editorial · theme: carnival (drop: citrus-riot)
+ * axes — paper band: light (94%) · display style: display-heavy (Big Shoulders 800)
+ * accent hue: duo-tone cool-green + magenta. Every colour and font in the build
+ * references a name here.
  */
 
 :root {
-  /* ── Paper & ink ────────────────────────────────────────────────── */
-  --color-paper: oklch(96.5% 0.012 68);
-  --color-paper-2: oklch(93.5% 0.014 68);
-  --color-paper-3: oklch(90% 0.016 66);
-  --color-rule: oklch(84% 0.012 66);
-  --color-rule-2: oklch(72% 0.014 62);
-  --color-neutral: oklch(
-    58% 0.012 60
-  ); /* rules & marks only — 3.1:1, never body text */
-  --color-muted: oklch(43% 0.014 58);
-  --color-ink-2: oklch(32% 0.014 55);
-  --color-ink: oklch(21% 0.016 52);
+  /* ── Paper & ink — Citrus Riot drop ─────────────────────────────── */
+  --color-paper: oklch(94% 0.04 85);
+  --color-paper-2: oklch(90% 0.048 82);
+  --color-paper-3: oklch(84% 0.055 80);
+  --color-ink: oklch(20% 0.07 145);
+  --color-ink-2: oklch(32% 0.05 140);
+  --color-muted: oklch(48% 0.04 130);
 
-  /* ── Accent — stamp-ink orange. Kept under 3% of any viewport. ──── */
-  --color-accent: oklch(52% 0.165 45); /* rules, underlines, marks */
-  --color-accent-deep: oklch(
-    42% 0.145 42
-  ); /* accent-coloured text & fills — 5.4:1 */
-  --color-accent-ink: oklch(97% 0.008 60); /* text ON an accent fill */
-  --color-focus: oklch(55% 0.19 45);
+  /* ── Rules ──────────────────────────────────────────────────────── */
+  --color-rule: oklch(28% 0.28 350); /* deep magenta — decorative, on paper */
+  --color-rule-2: oklch(56% 0.2 348);
+  --color-rule-on-accent: oklch(52% 0.24 350); /* rules on a magenta fill */
 
-  /* ── Type ───────────────────────────────────────────────────────── */
-  --font-display: "Newsreader", ui-serif, Georgia, serif;
+  /* ── Accent duo — lime + magenta ────────────────────────────────── */
+  --color-accent: oklch(82% 0.2 130); /* chartreuse-lime — fills & marks */
+  --color-accent-2: oklch(28% 0.28 350); /* deep magenta — text & fills */
+  --color-accent-ink: oklch(20% 0.07 145); /* ink ON a lime fill */
+  --color-focus: oklch(28% 0.28 350);
+
+  /* ── Type — 2+1 discipline ──────────────────────────────────────── */
+  --font-display: "Big Shoulders Display", sans-serif;
   --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  --font-mono: "Space Mono", ui-monospace, monospace;
 
   /* Major third, 1.25, from a 16px body. */
   --text-xs: 0.64rem;
@@ -38,9 +37,7 @@
   --text-lg: 1.5625rem;
   --text-xl: 1.9531rem;
   --text-2xl: 2.4414rem;
-  --text-3xl: 3.0518rem;
-  --text-display-s: clamp(1.75rem, 3.2vw + 0.75rem, 2.75rem);
-  --text-display: clamp(2.25rem, 4.4vw + 0.85rem, 3.75rem);
+  --text-display: clamp(2.5rem, 7vw + 1rem, 6rem);
 
   /* ── Space — 4pt base ───────────────────────────────────────────── */
   --space-3xs: 0.125rem;
@@ -52,21 +49,20 @@
   --space-xl: 2.5rem;
   --space-2xl: 4rem;
   --space-3xl: 6rem;
-  --space-4xl: 9rem;
   --page-gutter: clamp(1.125rem, 4vw, 3.5rem);
   --measure: 62ch;
-  --bar-height: 4.5rem;
 
-  /* ── Rules & radii — Almanac is square ──────────────────────────── */
+  /* ── Rules & radii — Carnival is square ─────────────────────────── */
   --rule-hair: 1px;
   --rule-thick: 2px;
   --radius-none: 0;
-  --radius-xs: 2px;
+  --shadow-hard: 4px 4px 0 0 var(--color-ink);
 
-  /* ── Motion — Almanac runs at 0.85×, functional like a reference book */
-  --dur-micro: 100ms;
+  /* ── Motion — Carnival runs at 0.7×, snappy ─────────────────────── */
+  --dur-micro: 110ms;
   --dur-short: 190ms;
-  --dur-long: 360ms;
+  --dur-long: 340ms;
+  --dur-ticker: 32s;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
@@ -75,5 +71,4 @@
   --z-base: 1;
   --z-raised: 10;
   --z-sticky: 200;
-  --shadow-hairline: 0 -1px 0 0 oklch(30% 0.014 55 / 0.1);
 }

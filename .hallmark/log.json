@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-08-06",
+    "genre": "editorial",
+    "macrostructure": "Marquee Hero",
+    "theme": "carnival",
+    "drop": "citrus-riot",
+    "theme_axes": "light / display-heavy / duo cool-green+magenta",
+    "nav": "N9 Edge-aligned minimal",
+    "footer": "Ft2 Inline single line",
+    "enrichment": "Tier-A pure-CSS halftone swatches + marquee ticker + ornaments",
+    "brief": "Dita Plastik · redesign lebih mencolok & penuh warna · CTA WhatsApp selalu di kanan bawah"
+  },
+  {
     "date": "2026-07-31",
     "genre": "editorial",
     "macrostructure": "Catalogue",
