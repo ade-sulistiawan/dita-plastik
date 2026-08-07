@@ -1,6 +1,6 @@
 /* Hallmark · v1.1.0 · macrostructure: bespoke commercial one-pager · theme: Hum (green-tuned)
- * genre: modern-minimal/corporate · enrichment: Tier A CSS/SVG placeholders · motion: minimal
- * axes — paper: light (98% cool) · display: rounded-sans (Plus Jakarta Sans) · accent hue: dark green #1B5E20
+ * genre: editorial-industrial/corporate · enrichment: Tier A CSS/SVG placeholders · motion: minimal
+ * axes — paper: warm near-white · display: serif (Fraunces) · accent hue: desaturated moss green
  * pre-emit critique: P5 H4 E5 S4 R5 V4
  */
 
@@ -28,6 +28,18 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   font-variant-numeric: tabular-nums;
+}
+
+/* Editorial grain — breaks digital flatness, fixed beneath everything */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-sticky);
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
 }
 
 img,
@@ -78,9 +90,10 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 650;
+  font-variation-settings: "opsz" 90;
   letter-spacing: var(--track-display);
-  line-height: 1.08;
+  line-height: 1.04;
   font-style: normal;
   overflow-wrap: anywhere;
   min-width: 0;
@@ -231,9 +244,10 @@ p {
   align-items: center;
   gap: var(--space-xs);
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 650;
+  font-variation-settings: "opsz" 40;
   font-size: var(--text-md);
-  letter-spacing: var(--track-display);
+  letter-spacing: -0.01em;
   line-height: 1;
 }
 .nav__mark {
@@ -336,22 +350,23 @@ p {
 }
 .hero__title {
   font-size: var(--text-display);
+  letter-spacing: var(--track-display-tight);
   margin: var(--space-sm) 0 var(--space-lg);
 }
 .hero__title em {
-  font-style: normal;
+  font-style: italic;
+  font-weight: 500;
   position: relative;
   white-space: nowrap;
 }
 .hero__title em::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0.06em;
-  height: 0.18em;
+  left: 0.04em;
+  right: -0.04em;
+  bottom: 0.08em;
+  height: 0.1em;
   background: var(--color-sage);
-  border-radius: var(--radius-pill);
   z-index: -1;
 }
 .hero__lede {
@@ -382,12 +397,12 @@ p {
 .stat__num {
   display: block;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
   font-size: var(--text-xl);
   color: var(--color-accent);
-  letter-spacing: var(--track-display);
-  line-height: 1.1;
-  font-feature-settings: "tnum";
+  letter-spacing: var(--track-display-tight);
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
 }
 .stat__label {
   font-size: var(--text-xs);
@@ -520,7 +535,8 @@ p {
   max-width: none;
   padding-inline: 0;
   background:
-    radial-gradient(60rem 30rem at 12% -10%, color-mix(in oklch, var(--color-accent-2) 26%, transparent), transparent 60%),
+    radial-gradient(60rem 30rem at 12% -10%, color-mix(in oklch, var(--color-accent-2) 22%, transparent), transparent 60%),
+    repeating-linear-gradient(0deg, transparent 0 2px, color-mix(in oklch, var(--color-accent-ink) 3%, transparent) 2px 3px),
     var(--color-accent);
   color: var(--color-accent-ink);
 }
@@ -544,7 +560,9 @@ p {
   margin-bottom: var(--space-2xl);
 }
 .section__head h2 {
-  font-size: clamp(1.7rem, 3.5vw + 0.5rem, 2.7rem);
+  font-size: clamp(1.8rem, 3.6vw + 0.5rem, 2.9rem);
+  font-weight: 600;
+  letter-spacing: var(--track-display-tight);
   margin: var(--space-xs) 0 var(--space-sm);
 }
 .section__head > p:not(.eyebrow) {
@@ -581,7 +599,8 @@ p {
   flex: 1;
 }
 .card__name {
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
+  font-weight: 600;
   margin-bottom: var(--space-xs);
 }
 .card__body > p {
@@ -738,13 +757,14 @@ p {
 .proc__num {
   display: grid;
   place-items: center;
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: var(--radius-input);
   background: var(--color-accent);
   color: var(--color-accent-ink);
-  font-family: var(--font-label);
+  font-family: var(--font-display);
   font-weight: 600;
+  font-variation-settings: "opsz" 20;
   font-size: var(--text-md);
   margin-bottom: var(--space-md);
 }
@@ -760,12 +780,13 @@ p {
 /* ─────────────── GALLERY ─────────────── */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 11rem;
   gap: var(--space-md);
 }
 .gitto {
   position: relative;
-  height: 15rem;
+  height: 100%;
   border-radius: var(--radius-card);
   overflow: hidden;
   background-color: var(--color-sage);
@@ -774,6 +795,15 @@ p {
     linear-gradient(160deg, var(--color-sage-2), var(--color-sage));
   border: 1px solid var(--color-rule);
   transition: transform var(--dur-short) var(--ease-out), box-shadow var(--dur-short);
+}
+.gi--warehouse {
+  grid-row: span 2;
+}
+.gi--bales {
+  grid-column: span 2;
+}
+.gi--truck {
+  grid-row: span 2;
 }
 .gitto:hover {
   transform: translateY(-4px);
@@ -843,6 +873,7 @@ p {
 .testi__quote {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
+  font-weight: 600;
   color: var(--color-accent);
   line-height: 0.4;
   margin-bottom: var(--space-lg);
@@ -931,7 +962,8 @@ p {
 /* ─────────────── CTA ─────────────── */
 .cta {
   background:
-    radial-gradient(40rem 24rem at 85% 120%, color-mix(in oklch, var(--color-lime) 22%, transparent), transparent 60%),
+    radial-gradient(40rem 24rem at 85% 120%, color-mix(in oklch, var(--color-lime) 18%, transparent), transparent 60%),
+    repeating-linear-gradient(0deg, transparent 0 2px, color-mix(in oklch, var(--color-accent-ink) 3%, transparent) 2px 3px),
     var(--color-accent);
   color: var(--color-accent-ink);
   text-align: center;
@@ -964,7 +996,9 @@ p {
   }
 }
 .cta h2 {
-  font-size: clamp(1.8rem, 4vw + 0.5rem, 3rem);
+  font-size: clamp(1.85rem, 4.2vw + 0.5rem, 3.2rem);
+  font-weight: 600;
+  letter-spacing: var(--track-display-tight);
   margin-bottom: var(--space-sm);
 }
 .cta p {
@@ -989,10 +1023,11 @@ p {
 }
 .footer__logo {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
+  font-variation-settings: "opsz" 40;
   font-size: var(--text-xl);
   color: var(--color-paper);
-  letter-spacing: var(--track-display);
+  letter-spacing: -0.01em;
   margin-bottom: var(--space-sm);
 }
 .footer__line {

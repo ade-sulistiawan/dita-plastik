@@ -1,39 +1,39 @@
-/* Hallmark · tokens · genre: modern-minimal/editorial corporate · theme: Hum (green-tuned)
- * axes — paper band: light (98%, cool near-white) · display style: rounded-sans (Plus Jakarta Sans 600)
- * accent hue: dark green #1B5E20 (sustainability) + lime WhatsApp pop. No serif anywhere.
+/* Hallmark · tokens · genre: editorial-industrial corporate · theme: Hum (green-tuned)
+ * axes — paper band: warm near-white · display style: serif headline (Fraunces) over grotesk body
+ * accent hue: desaturated moss green + restrained lime WhatsApp pop.
  * Every colour and font in the build references a name here.
  */
 
 :root {
-  /* ── Paper & ink — neutral near-white with a cool green pull ─────── */
-  --color-paper: oklch(98% 0.006 95);
-  --color-paper-2: oklch(96% 0.012 120);
-  --color-paper-3: oklch(93% 0.014 120);
-  --color-ink: oklch(21% 0.028 165);
-  --color-ink-2: oklch(33% 0.03 160);
-  --color-muted: oklch(48% 0.02 160);
+  /* ── Paper & ink — warm near-white, industrial sage pull ────────── */
+  --color-paper: oklch(97.5% 0.008 105);
+  --color-paper-2: oklch(95.5% 0.012 115);
+  --color-paper-3: oklch(92.5% 0.015 115);
+  --color-ink: oklch(23% 0.02 150);
+  --color-ink-2: oklch(34% 0.025 150);
+  --color-muted: oklch(49% 0.02 150);
 
   /* ── Rules — soft hairlines ──────────────────────────────────────── */
-  --color-rule: oklch(85% 0.014 120);
-  --color-rule-2: oklch(90% 0.012 120);
+  --color-rule: oklch(84% 0.016 115);
+  --color-rule-2: oklch(90% 0.013 115);
 
-  /* ── Accent system — green sustainability anchor + WhatsApp pop ──── */
-  --color-accent: #1B5E20;                 /* primary · dark green · buttons, marks, bands */
-  --color-accent-deep: oklch(30% 0.13 150);/* button underside (press edge) */
-  --color-accent-ink: #ffffff;              /* text ON dark green fill */
-  --color-accent-2: oklch(47% 0.13 148);   /* mid green — links, hover */
-  --color-sage: oklch(88% 0.05 150);        /* soft green tint — surfaces */
-  --color-sage-2: oklch(95% 0.03 150);      /* pale green band */
-  --color-lime: #25D366;                    /* WhatsApp pop — single energy moment */
-  --color-lime-deep: oklch(70% 0.18 155);   /* lime press edge */
-  --color-focus: oklch(62% 0.16 150);
+  /* ── Accent system — desaturated industrial moss + WhatsApp pop ──── */
+  --color-accent: oklch(36% 0.10 155);      /* primary · moss green · buttons, marks, bands */
+  --color-accent-deep: oklch(29% 0.105 155);/* button underside (press edge) */
+  --color-accent-ink: #fbfaf6;             /* warm text ON dark green fill */
+  --color-accent-2: oklch(47% 0.1 152);   /* mid green — links, hover */
+  --color-sage: oklch(88% 0.045 148);      /* soft green tint — surfaces */
+  --color-sage-2: oklch(95% 0.03 145);     /* pale green band */
+  --color-lime: #23c05a;                    /* WhatsApp pop — restrained energy moment */
+  --color-lime-deep: oklch(68% 0.17 152);  /* lime press edge */
+  --color-focus: oklch(62% 0.15 150);
 
-  /* ── Type — 2+1: display + body + mono label ─────────────────────── */
-  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  /* ── Type — serif display / grotesk body / mono label ─────────────── */
+  --font-display: "Fraunces", Georgia, ui-serif, serif;
   --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-label: "JetBrains Mono", ui-monospace, monospace;
 
-  /* Major third, 1.25, from a 16px body. */
+  /* Harmonic 1.25 from 16px body, display opts into optical size. */
   --text-xs: 0.72rem;
   --text-sm: 0.8rem;
   --text-base: 1rem;
@@ -41,8 +41,9 @@
   --text-lg: 1.5625rem;
   --text-xl: 1.9531rem;
   --text-2xl: 2.4414rem;
-  --text-display: clamp(2.4rem, 6.5vw + 0.75rem, 4.9rem);
-  --track-display: -0.025em;
+  --text-display: clamp(2.6rem, 6.8vw + 0.75rem, 5.4rem);
+  --track-display: -0.022em;
+  --track-display-tight: -0.035em;
 
   /* ── Space — 4pt base ────────────────────────────────────────────── */
   --space-3xs: 0.125rem;
@@ -58,13 +59,13 @@
   --measure: 60ch;
   --shell: 76rem;
 
-  /* ── Shape — rounded corporate ───────────────────────────────────── */
-  --radius-card: 18px;
+  /* ── Shape — restrained, editorial corners ──────────────────────── */
+  --radius-card: 12px;
   --radius-pill: 999px;
-  --radius-input: 12px;
-  --shadow-soft: 0 14px 40px -22px color-mix(in oklch, var(--color-ink) 50%, transparent);
-  --shadow-card: 0 1px 0 0 oklch(0% 0 0 / 0.02), 0 16px 34px -20px color-mix(in oklch, var(--color-ink) 35%, transparent);
-  --shadow-lift: 0 2px 0 0 oklch(0% 0 0 / 0.02), 0 22px 44px -20px color-mix(in oklch, var(--color-ink) 45%, transparent);
+  --radius-input: 8px;
+  --shadow-soft: 0 18px 42px -26px color-mix(in oklch, var(--color-ink) 45%, transparent);
+  --shadow-card: 0 1px 0 0 oklch(0% 0 0 / 0.02), 0 18px 34px -22px color-mix(in oklch, var(--color-ink) 32%, transparent);
+  --shadow-lift: 0 2px 0 0 oklch(0% 0 0 / 0.02), 0 24px 48px -22px color-mix(in oklch, var(--color-accent-2) 30%, transparent);
 
   /* ── Motion — calm, confident, minimal ───────────────────────────── */
   --dur-micro: 130ms;
