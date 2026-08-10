@@ -1,51 +1,63 @@
-/* Hallmark · tokens · genre: editorial-industrial corporate · theme: Hum (green-tuned)
- * axes — paper band: warm near-white · display style: serif headline (Fraunces) over grotesk body
- * accent hue: desaturated moss green + restrained lime WhatsApp pop.
+/* Hallmark · theme: studied-DNA (source: https://karateacadamy.framer.website/programs)
+ * axes — paper band: light, neutral (white → #f5f5f5 vertical gradient)
+ * display style: grotesk sans (DM Sans carries display AND body — single family)
+ * accent hue: warm-red #e33038 · gold #e7c355 / #c9a83c (value badges) · dark #0d0d0d (FAQ/footer)
  * Every colour and font in the build references a name here.
  */
 
 :root {
-  /* ── Paper & ink — warm near-white, industrial sage pull ────────── */
-  --color-paper: oklch(97.5% 0.008 105);
-  --color-paper-2: oklch(95.5% 0.012 115);
-  --color-paper-3: oklch(92.5% 0.015 115);
-  --color-ink: oklch(23% 0.02 150);
-  --color-ink-2: oklch(34% 0.025 150);
-  --color-muted: oklch(49% 0.02 150);
+  /* ── Paper & ink — white paper, black ink ─────────────────────── */
+  --color-paper: #ffffff;
+  --color-paper-2: #f5f5f5;
+  --color-ink: #000000;
+  --color-ink-2: rgba(0, 0, 0, 0.8);
+  --color-muted: rgba(0, 0, 0, 0.55);
 
-  /* ── Rules — soft hairlines ──────────────────────────────────────── */
-  --color-rule: oklch(84% 0.016 115);
-  --color-rule-2: oklch(90% 0.013 115);
+  /* ── Rules — hairline greys ───────────────────────────────────── */
+  --color-rule: #f3f4f6;
+  --color-rule-2: #e5e5e5;
+  --color-rule-dark: rgba(255, 255, 255, 0.18);
 
-  /* ── Accent system — desaturated industrial moss + WhatsApp pop ──── */
-  --color-accent: oklch(36% 0.10 155);      /* primary · moss green · buttons, marks, bands */
-  --color-accent-deep: oklch(29% 0.105 155);/* button underside (press edge) */
-  --color-accent-ink: #fbfaf6;             /* warm text ON dark green fill */
-  --color-accent-2: oklch(47% 0.1 152);   /* mid green — links, hover */
-  --color-sage: oklch(88% 0.045 148);      /* soft green tint — surfaces */
-  --color-sage-2: oklch(95% 0.03 145);     /* pale green band */
-  --color-lime: #23c05a;                    /* WhatsApp pop — restrained energy moment */
-  --color-lime-deep: oklch(68% 0.17 152);  /* lime press edge */
-  --color-focus: oklch(62% 0.15 150);
+  /* ── Accent system — warm-red, studied from the source ────────── */
+  --color-accent: #e33038;
+  --color-accent-light: #f0635d;
+  --color-accent-deep: #8b181c;
+  --color-accent-tint: #ffedeb;
+  --color-accent-ink: #ffffff;
+  --color-focus: #e33038;
 
-  /* ── Type — serif display / grotesk body / mono label ─────────────── */
-  --font-display: "Fraunces", Georgia, ui-serif, serif;
-  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-label: "JetBrains Mono", ui-monospace, monospace;
+  /* ── Gold — value badges & highlights ─────────────────────────── */
+  --color-gold: #c9a83c;
+  --color-gold-2: #e7c355;
+  --color-gold-tint: #fff0cb;
+  --color-gold-ink: #574500;
 
-  /* Harmonic 1.25 from 16px body, display opts into optical size. */
-  --text-xs: 0.72rem;
-  --text-sm: 0.8rem;
-  --text-base: 1rem;
-  --text-md: 1.25rem;
-  --text-lg: 1.5625rem;
-  --text-xl: 1.9531rem;
-  --text-2xl: 2.4414rem;
-  --text-display: clamp(2.6rem, 6.8vw + 0.75rem, 5.4rem);
-  --track-display: -0.022em;
-  --track-display-tight: -0.035em;
+  /* ── Dark surfaces — FAQ band & footer ────────────────────────── */
+  --color-dark: #0d0d0d;
+  --color-dark-2: #161616;
+  --color-dark-card: linear-gradient(180deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0.5) 100%);
+  --color-dark-card-rule: rgba(0, 0, 0, 0.4);
+  --color-ink-on-dark: rgba(255, 255, 255, 0.78);
+  --color-ink-on-dark-2: rgba(255, 255, 255, 0.6);
+  --color-ink-on-dark-3: rgba(255, 255, 255, 0.42);
 
-  /* ── Space — 4pt base ────────────────────────────────────────────── */
+  /* ── Type — DM Sans single family (display = body, weight-driven) */
+  --font-display: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Harmonic 1.25 from 15px body; display opts into 96px source value. */
+  --text-xs: 0.75rem;      /* 12px — eyebrows, labels */
+  --text-sm: 0.8125rem;    /* 13px — captions, sub-copy */
+  --text-base: 0.9375rem;  /* 15px — body */
+  --text-md: 1.0625rem;    /* 17px — lede */
+  --text-lg: 1.25rem;      /* 20px — subheads */
+  --text-xl: 1.75rem;      /* 28px — card titles */
+  --text-2xl: 2.25rem;     /* 36px — pricing figure */
+  --text-display: clamp(2.5rem, 6.2vw + 0.85rem, 5.9rem); /* 96px ceiling */
+  --track-display: -0.035em;
+  --track-label: 0.13em;
+
+  /* ── Space — 4pt base ────────────────────────────────────────── */
   --space-3xs: 0.125rem;
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
@@ -55,29 +67,36 @@
   --space-xl: 2.5rem;
   --space-2xl: 4rem;
   --space-3xl: 6rem;
-  --page-gutter: clamp(1.25rem, 4vw, 3.25rem);
-  --measure: 60ch;
-  --shell: 76rem;
+  --page-gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --measure: 64ch;
+  --shell: 75rem;
 
-  /* ── Shape — restrained, editorial corners ──────────────────────── */
-  --radius-card: 12px;
+  /* ── Shape — studied source: sharp buttons, asymmetric cards ──── */
+  --radius-btn: 8px;
+  --radius-card: 16px;
+  --radius-asym: 12px 56px 12px 56px;
   --radius-pill: 999px;
-  --radius-input: 8px;
-  --shadow-soft: 0 18px 42px -26px color-mix(in oklch, var(--color-ink) 45%, transparent);
-  --shadow-card: 0 1px 0 0 oklch(0% 0 0 / 0.02), 0 18px 34px -22px color-mix(in oklch, var(--color-ink) 32%, transparent);
-  --shadow-lift: 0 2px 0 0 oklch(0% 0 0 / 0.02), 0 24px 48px -22px color-mix(in oklch, var(--color-accent-2) 30%, transparent);
+  --shadow-soft: 0px 1px 2px -1px rgba(0, 0, 0, 0.2), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  --shadow-red: 0px 16px 16px -4px rgba(227, 48, 56, 0.25);
+  --shadow-card: 0px 0.6px 1.6px -1.5px rgba(0, 0, 0, 0.17), 0px 2.3px 6px -3px rgba(0, 0, 0, 0.14), 0px 10px 26px -4.5px rgba(0, 0, 0, 0.02);
+  --shadow-card-2: 0px 1.15px 3px -1.5px rgba(0, 0, 0, 0.18), 0px 4.6px 12px -3px rgba(0, 0, 0, 0.15), 0px 20px 40px -6px rgba(0, 0, 0, 0.1);
+  --shadow-card-dark: 0px 1.15px 3px -1.5px rgba(0, 0, 0, 0.35), 0px 4.6px 12px -3px rgba(0, 0, 0, 0.3), 0px 20px 40px -6px rgba(0, 0, 0, 0.25);
+  --shadow-red-hover: 0 20px 20px -4px rgba(227, 48, 56, 0.32);
+  --shadow-red-press: 0 6px 10px -4px rgba(227, 48, 56, 0.35);
+  --shadow-red-fab: 0 22px 22px -6px rgba(227, 48, 56, 0.4);
+  --shadow-btn-dark: 0px 8px 8px -4px rgba(227, 48, 56, 0.2);
+  --shadow-btn-dark-hover: 0 14px 14px -4px rgba(227, 48, 56, 0.3);
+  --shadow-btn-light: 0px 8px 8px -4px rgba(0, 0, 0, 0.25);
+  --shadow-nav-scrolled: 0px 1px 2px -1px rgba(0, 0, 0, 0.2), 0px 6px 14px 0px rgba(0, 0, 0, 0.14);
 
-  /* ── Motion — calm, confident, minimal ───────────────────────────── */
+  /* ── Motion — confident, short ────────────────────────────────── */
   --dur-micro: 130ms;
   --dur-short: 220ms;
   --dur-long: 420ms;
-  --dur-spring: 620ms;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --ease-spring: cubic-bezier(0.34, 1.42, 0.64, 1);
-  --ease-press: cubic-bezier(0.2, 0.7, 0.3, 1);
 
-  /* ── Depth ───────────────────────────────────────────────────────── */
+  /* ── Depth ───────────────────────────────────────────────────── */
   --z-base: 1;
   --z-raised: 10;
   --z-sticky: 200;
