@@ -29,9 +29,17 @@
       <style>
         .prog,
         .plan,
-        .faq__item {
+        .faq__item,
+        .shot {
           opacity: 1 !important;
           transform: none !important;
+        }
+        .hero .eyebrow,
+        .hero__title span,
+        .hero__lede,
+        .hero__actions {
+          animation: none !important;
+          opacity: 1 !important;
         }
       </style>
     </noscript>
@@ -42,6 +50,9 @@
       2. Alamat gudang: cari-ganti "Jl. Contoh Raya No. 00, Bekasi"
       3. Jam operasional: cari-ganti "Senin–Sabtu, 08.00–17.00"
       4. Area jemput  : cari-ganti "Bekasi, Jakarta Timur, Cikarang"
+      5. Foto galeri  : memakai placeholder picsum.photos (seed stabil) — ganti
+         src pada tiap <img> dengan foto asli (gudang, bal plastik, flakes
+         HDPE, karung PP, muat truk, proses sortir) sebelum publikasi.
       Tidak ada angka harga, tonase, mitra, atau jumlah yang dikarang.
       Harga ditampilkan sebagai "mengikuti pasar harian" — konfirmasi via WhatsApp.
     -->
@@ -61,6 +72,7 @@
             <li><a href="#beranda">Beranda</a></li>
             <li><a href="#jenis">Jenis Plastik</a></li>
             <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#galeri">Galeri</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#kontak">Kontak</a></li>
           </ul>
@@ -87,6 +99,7 @@
           <li><a href="#beranda">Beranda</a></li>
           <li><a href="#jenis">Jenis Plastik</a></li>
           <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#galeri">Galeri</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#kontak">Kontak</a></li>
         </ul>
@@ -118,6 +131,14 @@
           </div>
         </div>
       </section>
+
+      <!-- ticker divider · infinite marquee -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <div class="ticker__group"><span>HDPE</span><b>&bull;</b><span>PE</span><b>&bull;</b><span>PP</span><b>&bull;</b><span>LDPE</span><b>&bull;</b><span>PET</span><b>&bull;</b><span>Plastik Campur</span><b>&bull;</b><span>Harga Pasar Harian</span><b>&bull;</b></div>
+          <div class="ticker__group"><span>HDPE</span><b>&bull;</b><span>PE</span><b>&bull;</b><span>PP</span><b>&bull;</b><span>LDPE</span><b>&bull;</b><span>PET</span><b>&bull;</b><span>Plastik Campur</span><b>&bull;</b><span>Harga Pasar Harian</span><b>&bull;</b></div>
+        </div>
+      </div>
 
       <!-- PLASTIC TYPES · catalogue of six -->
       <section class="section" id="jenis">
@@ -290,6 +311,41 @@
         </div>
       </section>
 
+      <!-- GALLERY · photo tiles -->
+      <section class="section" id="galeri">
+        <header class="section__head">
+          <p class="eyebrow">Galeri</p>
+          <h2>Dari Gudang ke Pabrik Daur Ulang</h2>
+          <p>Ilustrasi kegiatan harian kami — foto stok sementara, ganti dengan foto gudang sungguhan.</p>
+        </header>
+        <div class="gallery">
+          <figure class="shot shot--tall">
+            <img src="https://picsum.photos/seed/dita-gudang/900/1200" alt="Foto placeholder: gudang penyimpanan" loading="lazy" />
+            <figcaption>Gudang — ganti foto asli</figcaption>
+          </figure>
+          <figure class="shot shot--wide">
+            <img src="https://picsum.photos/seed/dita-bales/1200/700" alt="Foto placeholder: bal plastik terikat" loading="lazy" />
+            <figcaption>Bal plastik — ganti foto asli</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="https://picsum.photos/seed/dita-flakes/700/700" alt="Foto placeholder: flakes HDPE" loading="lazy" />
+            <figcaption>Flakes HDPE — ganti foto asli</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="https://picsum.photos/seed/dita-karung/700/700" alt="Foto placeholder: karung PP" loading="lazy" />
+            <figcaption>Karung PP — ganti foto asli</figcaption>
+          </figure>
+          <figure class="shot shot--tall">
+            <img src="https://picsum.photos/seed/dita-truk/900/1200" alt="Foto placeholder: muat truk" loading="lazy" />
+            <figcaption>Muat truk — ganti foto asli</figcaption>
+          </figure>
+          <figure class="shot shot--wide">
+            <img src="https://picsum.photos/seed/dita-sortir/1200/700" alt="Foto placeholder: proses sortir plastik" loading="lazy" />
+            <figcaption>Sortir plastik — ganti foto asli</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <!-- FAQ · dark band -->
       <section class="section section--dark" id="faq">
         <div class="wrap">
@@ -340,6 +396,7 @@
             <li><a href="#beranda">Beranda</a></li>
             <li><a href="#jenis">Jenis Plastik</a></li>
             <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#galeri">Galeri</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
@@ -397,7 +454,7 @@
         (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("is-in")),
         { threshold: 0.14 }
       );
-      document.querySelectorAll(".prog,.plan,.faq__item").forEach((el) => io.observe(el));
+      document.querySelectorAll(".prog,.plan,.faq__item,.shot").forEach((el) => io.observe(el));
     </script>
   </body>
 </html>
