@@ -98,14 +98,12 @@ const PrismaHero = () => {
     <section className="h-screen w-full">
       <div className="relative h-full w-full overflow-hidden rounded-2xl md:rounded-[2rem]">
         
-        {/* Background video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
+        {/* Background image */}
+        <img
           className="absolute inset-0 h-full w-full object-cover"
-          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5cff-4628-b164-059c500a2b41.mp4"
+          src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2400&auto=format&fit=crop"
+          alt="Cinematic film projection in a dark theater"
+          loading="eager"
         />
 
 
