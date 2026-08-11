@@ -16,13 +16,21 @@
   /* ── Rules — hairline greys ───────────────────────────────────── */
   --color-rule: #f3f4f6;
   --color-rule-2: #e5e5e5;
+  --color-rule-strong: rgba(0, 0, 0, 0.2);
   --color-rule-dark: rgba(255, 255, 255, 0.18);
+
+  /* ── Glass & covers — nav blur, photo captions, CTA overlay ───── */
+  --color-nav-glass: rgba(255, 255, 255, 0.92);
+  --color-chip-dark: rgba(13, 13, 13, 0.82);
+  --color-cover: rgba(13, 13, 13, 0.8);
+  --color-cover-2: rgba(13, 13, 13, 0.62);
 
   /* ── Accent system — warm-red, studied from the source ────────── */
   --color-accent: #e33038;
   --color-accent-light: #f0635d;
   --color-accent-deep: #8b181c;
   --color-accent-tint: #ffedeb;
+  --color-accent-fade: rgba(227, 48, 56, 0.25);
   --color-accent-ink: #ffffff;
   --color-focus: #e33038;
 
@@ -74,6 +82,7 @@
   /* ── Shape — studied source: sharp buttons, asymmetric cards ──── */
   --radius-btn: 8px;
   --radius-card: 16px;
+  --radius-2xl: 24px;
   --radius-asym: 12px 56px 12px 56px;
   --radius-pill: 999px;
   --shadow-soft: 0px 1px 2px -1px rgba(0, 0, 0, 0.2), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);

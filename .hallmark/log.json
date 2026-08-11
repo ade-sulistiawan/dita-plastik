@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-08-11",
+    "genre": "editorial",
+    "macrostructure": "studied-DNA homepage (lead-gen long form)",
+    "theme": "studied-DNA (karateacadamy.framer.website home)",
+    "theme_axes": "light / grotesk-sans / warm-red",
+    "nav": "top bar + dark CTA",
+    "footer": "Ft4 four columns",
+    "enrichment": "photo-driven picsum placeholders + portrait hero card",
+    "brief": "Dita Plastik \u00b7 redesign like karate homepage + SEO"
+  },
+  {
     "date": "2026-08-06",
     "genre": "playful",
     "macrostructure": "Bento Grid",
@@ -10,7 +21,7 @@
     "nav": "N1b floating wordmark + pill links",
     "footer": "Ft5 Statement",
     "enrichment": "Tier-A pure-CSS floating bubbles + marquee ticker",
-    "brief": "Dita Plastik · redesign bubble theme + animation"
+    "brief": "Dita Plastik \u00b7 redesign bubble theme + animation"
   },
   {
     "date": "2026-08-06",
@@ -22,7 +33,7 @@
     "nav": "N9 Edge-aligned minimal",
     "footer": "Ft2 Inline single line",
     "enrichment": "Tier-A pure-CSS halftone swatches + marquee ticker + ornaments",
-    "brief": "Dita Plastik · redesign lebih mencolok & penuh warna · CTA WhatsApp selalu di kanan bawah"
+    "brief": "Dita Plastik \u00b7 redesign lebih mencolok & penuh warna \u00b7 CTA WhatsApp selalu di kanan bawah"
   },
   {
     "date": "2026-07-31",
@@ -33,6 +44,6 @@
     "nav": "N6 Newspaper masthead",
     "footer": "Ft4 Dense colophon",
     "enrichment": "Tier-A pure-CSS material swatches",
-    "brief": "Dita Plastik · jual beli sampah plastik HD/PE/PP/HDPE · CTA WhatsApp"
+    "brief": "Dita Plastik \u00b7 jual beli sampah plastik HD/PE/PP/HDPE \u00b7 CTA WhatsApp"
   }
 ]
