@@ -22,7 +22,12 @@ optionally prefixed with a conventional type (`feat:`, `fix:`, etc.):
 
 ## Project notes
 
-- Vanilla HTML/CSS one-pager (`index.html`, `tokens.css`, `styles.css`).
+- Vanilla HTML/CSS one-pager (`index.html`, `tokens.css`, `styles.css`) — the
+  deployed site.
 - All colours and fonts must reference named tokens in `tokens.css`.
 - Placeholder contact data (WhatsApp `6281234567890`, address, hours) lives in
   `index.html` — do not invent real numbers.
+- React app lives in `web/` (Vite + React + TS + Tailwind v4 + shadcn). Run
+  with `npm run dev` inside `web/`; components follow the shadcn convention
+  under `web/src/components/ui/` with the `@/` alias mapped to `web/src`.
+  Node 20.11+ required (vite config uses `import.meta.dirname`).
